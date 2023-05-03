@@ -20,9 +20,9 @@ h1{
 }
 
 .container{
-    font-size: 10px;
+    font-size: 8px;
     width: 40em;
-    height: 40em;
+    height: 35em;
     position: relative;
 }
 
@@ -34,16 +34,12 @@ h1{
         margin: -20rem;
     }
     h1{
-        font-size: 1.5rem
-    }
-}
-
-@media (max-width: 393px) {
-    h1{
-        font-size: 1.0rem;
+        font-size: 1.1rem;
         margin-top: 8rem;
     }
 }
+
+
 
 .sun{
     position: absolute;
@@ -108,7 +104,7 @@ h1{
     right: 0.2em;
     width: 1.2em;
     height: 1.2em;
-    background-color: silver;
+    background-color: #bdc3c7;
 }
 
 .venus{
@@ -125,7 +121,7 @@ h1{
     right: 2.3em;
     width: 2.5em;
     height: 2.5em;
-    background-color:saddlebrown;
+    background-color:#f2dca6;
 }
 
 .mars{
@@ -142,7 +138,7 @@ h1{
     right: 5.5em;
     width: 1.5em;
     height: 1.5em;
-    background-color: darkred;
+    background-color: #d25d36;
 }
 
 .jupiter{
@@ -159,7 +155,8 @@ h1{
     right: -0.5em;
     width: 16.5em;
     height: 16.5em;
-    background-color: sienna;
+    background-color: #cfa06e;
+    background-image: linear-gradient(to bottom, #f1d27d, #a37b5d 40%, #7d5842);
 }
 
 @keyframes orbit {
