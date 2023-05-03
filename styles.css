@@ -38,6 +38,13 @@ h1{
     }
 }
 
+@media (max-width: 393px) {
+    h1{
+        font-size: 1.0rem;
+        margin-top: 8rem;
+    }
+}
+
 .sun{
     position: absolute;
     top: 15em;
