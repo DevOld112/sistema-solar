@@ -18,4 +18,7 @@ for (let i = 0; i < 100; i++) {
   star.style.height = star.style.width;
   stars.appendChild(star);
 }
+
 });
+
+

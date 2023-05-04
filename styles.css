@@ -20,7 +20,7 @@ h1{
 }
 
 .container{
-    font-size: 8px;
+    font-size: 5px;
     width: 40em;
     height: 35em;
     position: relative;
@@ -28,14 +28,8 @@ h1{
 
 @media (max-width: 768px) {
     .container{
-        font-size: 5px;        
-    }
-    header{
-        margin: -20rem;
-    }
-    h1{
-        font-size: 1.1rem;
-        margin-top: 8rem;
+        width: 0em;
+        height: 0em;      
     }
 }
 
@@ -52,7 +46,7 @@ h1{
     box-shadow: 0 0 3em white;
 }
 
-.earth, .moon, .venus, .mars, .jupiter{
+.earth, .moon, .venus, .mars, .jupiter, .saturno{
     position: absolute;
     border-style: solid;
     border-color: white
@@ -85,7 +79,8 @@ h1{
 .moon::before,
 .venus::before,
 .mars::before,
-.jupiter::before{
+.jupiter::before,
+.saturno::before{
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -97,6 +92,7 @@ h1{
     width: 3em;
     height: 3em;
     background-color: aqua;
+    z-index: 2;
 }
 
 .moon::before{
@@ -151,12 +147,29 @@ h1{
 }
 
 .jupiter::before{
-    top: 8.5em;
-    right: -0.5em;
-    width: 16.5em;
-    height: 16.5em;
+    top: 10.5em;
+    right: 5.5em;
+    width: 8.5em;
+    height: 8.5em;
     background-color: #cfa06e;
     background-image: linear-gradient(to bottom, #f1d27d, #a37b5d 40%, #7d5842);
+}
+
+.saturno{
+    top: -36em;
+    left: -36em;
+    width: 120em;
+    height: 120em;
+    animation: orbit 200s
+    linear infinite;
+}
+
+.saturno::before{
+    top: 14.5em;
+    right: 13.5em;
+    width: 5.5em;
+    height: 5.5em;
+    background-color: #ee9331;
 }
 
 @keyframes orbit {
@@ -184,4 +197,34 @@ h1{
     background-color: #fff;
     border-radius: 50%;
     opacity: 0.8;
-  }
+    box-shadow: 0 0 1em white;
+
+}
+
+.titulo{
+        font-size: 5px;
+        width: 0em;
+        height: 55em;
+        position: absolute
+    }
+
+.ring{
+        top: 59px;
+        right: 65px;
+        width: 5em;
+        height: 10em;
+        animation: orbit 25s
+        linear infinite;
+    }
+
+.ring::before{
+    background-color: #bdc3c7;
+}
+
+.ring{
+    position: absolute;
+    border-style: double;
+    border-color: silver;
+    border-width: 0.4em 0.4em 0.4em 0.4em;
+    border-radius: 50%;
+}
