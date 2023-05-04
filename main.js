@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // Selecciona el elemento con clase "stars"
 const stars = document.querySelector('.stars');
 
-// Función para generar un número aleatorio
 function randomNum(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -19,29 +18,51 @@ for (let i = 0; i < 100; i++) {
   stars.appendChild(star);
 }
 
-const sol = document.querySelector('.sun');
+// Interactividad con el Sistema Solar
 
-sol.addEventListener('click', (event) => {
-  const solClickeado = event.target;
-  alert (`El Sol es la estrella más próxima a la Tierra y se encuentra a una distancia promedio de 150 millones de kilómetros. Es la principal fuente primaria de luz y calor para la Tierra.`)
+// Sol
+
+const sol = document.querySelector('.sun');
+const ventanaEmergenteSol = document.getElementById('ventana-emergente-sol')
+const cerrarVentanaSol = document.getElementById('cerrar-ventana-sol')
+
+sol.addEventListener('click', () => {
+  ventanaEmergenteSol.classList.remove('oculto');
 })
+
+cerrarVentanaSol.addEventListener('click', () => {
+  ventanaEmergenteSol.classList.add('oculto')
+})
+
+
+// Venus // 
+
+const venus = document.querySelector('.venus');
+const ventanaEmergenteVenus = document.getElementById('ventana-emergente-venus');
+const cerrarVentanaVenus = document.getElementById('cerrar-ventana-venus');
+
+venus.addEventListener('click', () => {
+  ventanaEmergenteVenus.classList.remove('oculto');
+});
+
+cerrarVentanaVenus.addEventListener('click', () => {
+  ventanaEmergenteVenus.classList.add('oculto');
+});
+
+
+//Tierra
 
 const tierra = document.querySelector('.earth');
-const tierraStyle = window.getComputedStyle(tierra, '::before');
+const ventanaEmergenteTierra = document.getElementById('ventana-emergente-tierra')
+const cerrarVentanaTierra = document.getElementById('cerrar-ventana-tierra');
 
-tierra.addEventListener('click', (event) => {
-  const tierraClickeado = event.target;
-  alert (tierraStyle.getPropertyValue('content'));
+tierra.addEventListener('click', () => {
+  ventanaEmergenteTierra.classList.remove('oculto')
+});
+
+cerrarVentanaTierra.addEventListener('click', () =>{
+  ventanaEmergenteTierra.classList.add('oculto');
 })
-
-const jupiter = document.querySelector('.jupiter');
-const jupiterStyle = window.getComputedStyle(jupiter, '::before')
-
-jupiter.addEventListener('click', (event) => {
-    const jupiterClickeado = event.target;
-    alert(jupiterStyle.getPropertyValue('content'))
-})
-
 
 });
 

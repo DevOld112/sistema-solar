@@ -96,8 +96,6 @@ h1{
     height: 3em;
     background-color: aqua;
     z-index: 2;
-    content: 'La Tierra tiene una masa de aproximadamente mil trillones de toneladas. Tiene un radio de alrededor de 6370 km. Cuenta con un satélite, la Luna, que gira en torno a ella. Es un geoide, es decir, la forma de la Tierra es concretamente una esfera aplanada en los polos norte y sur.';
-    color: transparent;
 }
 
 .moon::before{
@@ -115,6 +113,8 @@ h1{
     height: 22em;
     animation: orbit 28.5s 
     linear infinite;
+    color: transparent;
+    z-index: 5;
 }
 
 .venus::before{
@@ -123,6 +123,7 @@ h1{
     width: 2.5em;
     height: 2.5em;
     background-color:#f2dca6;
+    
 }
 
 .mars{
@@ -236,3 +237,54 @@ h1{
     border-width: 0.4em 0.4em 0.4em 0.4em;
     border-radius: 50%;
 }
+
+.oculto {
+    display: none;
+  }
+
+
+#ventana-emergente-venus {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222222ad;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(192, 192, 192);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(248, 245, 245);
+    z-index: 9999;
+  }
+  
+
+  #ventana-emergente-tierra {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222222ad;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(192, 192, 192);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(248, 245, 245);
+    z-index: 9999;
+  }
+
+  #ventana-emergente-sol {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222222ad;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(192, 192, 192);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(248, 245, 245);
+    z-index: 9999;
+  }

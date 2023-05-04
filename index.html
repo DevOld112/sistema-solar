@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +9,6 @@
     <title>Sistema Solar</title>
 </head>
 <body>
-    <div class="container titulo">
-</div>
     <div class="container">
         <div class="stars">
             <div class="star">      
@@ -18,6 +16,7 @@
         </div>
         <div class="sun"></div>
         <div class="earth">
+            <div class="earth::before"></div>
             <div class="moon"></div>
         </div>
         <div class="venus"></div>
@@ -26,6 +25,25 @@
         <div class="saturno">
             <div class="ring"></div>
         </div>
+
+        <div id="ventana-emergente-sol" class="oculto">
+            <p>Descripción del Sol:</p>
+            <p>El Sol es la estrella más próxima a la Tierra y se encuentra a una distancia promedio de 150 millones de kilómetros. Es la principal fuente primaria de luz y calor para la Tierra.</p>
+            <button id="cerrar-ventana-sol">Cerrar</button>
+        </div>
+
+        <div id="ventana-emergente-venus" class="oculto">
+            <p>Descripción de Venus:</p>
+            <p>Venus es el segundo planeta del sistema solar y es conocido por su atmósfera densa y su superficie volcánica.</p>
+            <button id="cerrar-ventana-venus">Cerrar</button>
+        </div>
+        
+        <div id="ventana-emergente-tierra" class="oculto">
+            <p>Descripción del planeta Tierra:</p>
+            <p>La Tierra tiene una masa de aproximadamente mil trillones de toneladas. Tiene un radio de alrededor de 6370 km. Cuenta con un satélite, la Luna, que gira en torno a ella. Es un geoide, es decir, la forma de la Tierra es concretamente una esfera aplanada en los polos norte y sur.</p>
+            <button id="cerrar-ventana-tierra">Cerrar</button>
+        </div>
+        
         
     </div>
     
