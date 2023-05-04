@@ -12,7 +12,9 @@ Adicional a eso, cree un fondo de estrellas :star: que se generan de manera alea
 
 ### :calendar: 03/05/2023
 
-Agregue el planeta Saturno al sistema solar con su respectivo anillo, no fue facil. Adicional a ello reduje el tamaño general del sistema solar para que se haga mas agradable a la vista y poder agregar los demas planetas a futuro
+Se agrego el planeta Saturno 🪐 al sistema solar con su respectivo anillo, no fue un proceso sencillo. Adicional a ello reduje el tamaño general del sistema solar para que se haga mas agradable a la vista y poder agregar los demas planetas a futuro.
+
+En otra actualizacion del mismo dia, he podido incluir una ventana emergente al presionar en click en el Sol :sunny:, La Tierra :earth_americas: y Venus.
 
 
 Deploy de mi proyecto actualizado: https://frolicking-dusk-9fb1ba.netlify.app/ 
