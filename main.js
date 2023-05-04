@@ -19,6 +19,32 @@ for (let i = 0; i < 100; i++) {
   stars.appendChild(star);
 }
 
+const sol = document.querySelector('.sun');
+
+sol.addEventListener('click', (event) => {
+  const solClickeado = event.target;
+  alert (`El Sol es la estrella más próxima a la Tierra y se encuentra a una distancia promedio de 150 millones de kilómetros. Es la principal fuente primaria de luz y calor para la Tierra.`)
+})
+
+const tierra = document.querySelector('.earth');
+const tierraStyle = window.getComputedStyle(tierra, '::before');
+
+tierra.addEventListener('click', (event) => {
+  const tierraClickeado = event.target;
+  alert (tierraStyle.getPropertyValue('content'));
+})
+
+const jupiter = document.querySelector('.jupiter');
+const jupiterStyle = window.getComputedStyle(jupiter, '::before')
+
+jupiter.addEventListener('click', (event) => {
+    const jupiterClickeado = event.target;
+    alert(jupiterStyle.getPropertyValue('content'))
+})
+
+
 });
+
+
 
 
