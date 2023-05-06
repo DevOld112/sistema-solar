@@ -11,7 +11,7 @@ body{
 img {
     display: block;
     margin: 0 auto;
-    width: 75%;
+    max-width: 50%;
 }
 
 header{
@@ -44,6 +44,21 @@ h3{
     }
 }
 
+button{
+    background-color: #222;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    font-family: 'Dosis' sans-serif;
+    color: silver;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+button:hover{
+    background-color: #424242
+}
 
 
 .sun{
@@ -55,10 +70,14 @@ h3{
     background-color: yellow;
     border-radius: 50%;
     box-shadow: 0 0 3em white;
-    z-index: 6;
+    z-index: 10;
 }
 
-.earth, .moon, .venus, .mars, .jupiter, .saturno{
+.sun:hover{
+    background-color: rgb(187, 187, 7);
+}
+
+.earth, .moon, .venus, .mars, .jupiter, .saturno, .urano{
     position: absolute;
     border-style: solid;
     border-color: white
@@ -74,11 +93,11 @@ h3{
     left: 5em;
     width: 30em;
     height: 30em;
-    animation: orbit 36.5s /* Segundos que tarda en dar la vuelta respecto al sol */
+    animation: orbit 36.5s
     linear infinite;
-    z-index: 5;
-
+    z-index: 7;
 }
+
 
 .moon{
     top: 0;
@@ -94,20 +113,30 @@ h3{
 .venus::before,
 .mars::before,
 .jupiter::before,
-.saturno::before{
+.saturno::before,
+.urano::before{
     content: '';
     position: absolute;
     border-radius: 50%;
 }
+
+
 
 .earth::before{
     top: 2.8em;
     right: 2.8em;
     width: 3em;
     height: 3em;
-    background-color: aqua;
-    z-index: 2;
+    background-color: #4d4d4d;
+    background-image: radial-gradient(circle at 50% 50%, #0059c6, #00ffea);
+    z-index: 15;
 }
+
+.earth:hover::before{
+    background-color: #978b8b;
+    background-image: radial-gradient(circle at 50% 50%, #1967c5, #19a095);
+}
+
 
 .moon::before{
     top: 0.8em;
@@ -125,7 +154,7 @@ h3{
     animation: orbit 28.5s 
     linear infinite;
     color: transparent;
-    z-index: 5;
+    z-index: 7;
 }
 
 .venus::before{
@@ -137,6 +166,11 @@ h3{
     
 }
 
+.venus:hover::before{
+    background-color: #b99f5e;
+}
+
+
 .mars{
     top: -5em;
     left: 0em;
@@ -144,6 +178,7 @@ h3{
     height: 45em;
     animation: orbit 60s 
     linear infinite;
+    z-index: 6;
 }
 
 .mars::before{
@@ -154,6 +189,10 @@ h3{
     background-color: #d25d36;
 }
 
+.mars:hover::before{
+    background-color: #a5330d;
+}
+
 .jupiter{
     top: -17em;
     left: -20em;
@@ -161,7 +200,7 @@ h3{
     height: 85em;
     animation: orbit 140s
     linear infinite;
-    z-index: 4;
+    z-index: 5;
 }
 
 .jupiter::before{
@@ -170,9 +209,14 @@ h3{
     width: 8.5em;
     height: 8.5em;
     background-color: #cfa06e;
-    background-image: linear-gradient(to bottom, #f1d27d, #a37b5d 40%, #7d5842);
+    background-image: linear-gradient(to bottom, #d8b34f, #ac744a 40%, #7d5842);
     color: transparent;
     content: 'Júpiter es un gigante hecho de gas, y no tiene una superficie sólida, pero puede tener un núcleo interno sólido de aproximadamente el tamaño de la Tierra. Júpiter también tiene anillos, pero son demasiado tenues para verlos muy bien.';
+}
+
+.jupiter:hover::before{
+    background-color: #d3934e;
+    background-image: linear-gradient(to bottom, #f1d27d, #a37b5d 40%, #ad7d60);
 }
 
 .saturno{
@@ -182,6 +226,7 @@ h3{
     height: 120em;
     animation: orbit 200s
     linear infinite;
+    z-index: 4;
 }
 
 .saturno::before{
@@ -190,6 +235,34 @@ h3{
     width: 5.5em;
     height: 5.5em;
     background-color: #ee9331;
+}
+
+.saturno:hover::before{
+    background-color: #d47e23;
+}
+
+.urano{
+    top: -66em;
+    left: -56em;
+    width: 166em;
+    height: 166em;
+    animation: orbit 270s
+    linear infinite;
+    
+}
+
+.urano::before{
+    top: 23.5em;
+    right: 21.5em;
+    width: 4.5em;
+    height: 4.5em;
+    background-color: #4b65f8;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.urano:hover::before{
+    background-color: #384dc4;
 }
 
 @keyframes orbit {
@@ -208,7 +281,7 @@ h3{
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -2;
+    z-index: 0;
     background-color: transparent;
 }
 
@@ -220,13 +293,6 @@ h3{
     box-shadow: 0 0 1em white;
     z-index: -1;
 }
-
-.titulo{
-        font-size: 5px;
-        width: 0em;
-        height: 55em;
-        position: absolute
-    }
 
 .ring{
         top: 59px;
@@ -249,62 +315,103 @@ h3{
     border-radius: 50%;
 }
 
-.oculto {
-    display: none;
-  }
 
-button{
-    background-color: silver;
-    padding: 1rem;
+
+#ventana-emergente-venus, 
+#ventana-emergente-marte, 
+#ventana-emergente-tierra, 
+#ventana-emergente-sol,
+#ventana-emergente-sirius,
+#ventana-emergente-betelgeuse,
+#ventana-emergente-aldebaran,
+#ventana-emergente-jupiter,
+#ventana-emergente-saturno,
+#ventana-emergente-urano,
+#ventana-emergente-rigel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222222ad;
+    padding: 20px;
     font-size: 1rem;
     font-weight: bold;
+    color: rgb(192, 192, 192);
     border-radius: 10px;
-    
+    box-shadow: 0px 0px 10px rgb(248, 245, 245);
+    z-index: 9999;
+    font-family: 'Dosis', sans-serif;
+
+}
+
+#ventana-emergente-sol.activo{
+    opacity: 1;
+    transition: 0.5s ease all;
 }
 
 
-#ventana-emergente-venus {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #222222ad;
-    padding: 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: rgb(192, 192, 192);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgb(248, 245, 245);
-    z-index: 9999;
+.sirius, .rigel {
+    position: absolute;
+    background-color: #4533e6;
+    border-radius: 50%;
+    opacity: 3.8;
+    box-shadow: 0 0 1em #1e90ff, 0 0 2em #1e90ff, 0 0 3em #1e90ff, 0 0 4em #1e90ff, 0 0 5em #1e90ff;
+    z-index: 4;
+}
+
+.sirius, .rigel:hover{
+    background-color: #373180;
+}
+
+.betelgeuse{
+    position: absolute;
+    background-color: #e43131;
+    border-radius: 50%;
+    opacity: 3.8;
+    box-shadow: 0 0 1em #f1c40f, 0 0 2em #f1c40f, 0 0 3em #f1c40f, 0 0 4em #f1c40f, 0 0 5em #f1c40f;
+    z-index: 1;
+}
+
+.betelgeuse:hover{
+    background-color: #9c3232;
+}
+
+.aldebaran{
+    position: absolute;
+    background-color: #c73636;
+    border-radius: 50%;
+    opacity: 3.8;
+    box-shadow: 0 0 1em #f1c40f, 0 0 2em #f1c40f, 0 0 3em #f1c40f, 0 0 4em #f1c40f, 0 0 5em #f1c40f;
+    z-index: 3;
+}
+
+.aldebaran:hover{
+    background-color: #d11919;
+}
+
+.oculto {
+    display: none;
+}
+
+
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+
+/* Animaciones */
+
+@keyframes ventanaEmergente {
+    from {
+    transform: scale(0);
+    }
+    to {
+    transform: scale(1);
+    }
   }
   
-
-  #ventana-emergente-tierra {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #222222ad;
-    padding: 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: rgb(192, 192, 192);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgb(248, 245, 245);
-    z-index: 9999;
+  .ventana-emergente {
+    animation: ventanaEmergente 0.3s ease-out;
+    animation-composition: add;
   }
-
-  #ventana-emergente-sol {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #222222ad;
-    padding: 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: rgb(192, 192, 192);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgb(248, 245, 245);
-    z-index: 9999;
-  }
+  

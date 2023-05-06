@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Open+Sans&family=PT+Sans:wght@400;700&family=Source+Sans+Pro:ital,wght@1,700&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
@@ -9,46 +12,134 @@
     <title>Sistema Solar</title>
 </head>
 <body>
+    <audio id="myAudio" autoplay loop volume="0.1">
+        <source src="/imagenes/X2Download.app - The Prelude-Final Fantasy VI Music_OST (128 kbps).mp3" type="audio/mpeg">
+    </audio>
     <div class="container">
         <div class="stars">
+            <div class="sirius" style="left: 93%; top: 49%; width: 5px; height: 5px;"></div>
+            <div class="betelgeuse" style="left: 92%; top: 27%; width: 4px; height: 4px;"></div>
+            <div class="aldebaran" style="left:19%; top: 28%; width: 5px; height: 5px;"></div>
+            <div class="rigel" style="left: 20%; top: 41%; width: 4px; height: 4px;"></div>
             <div class="star">      
             </div>
         </div>
         <div class="sun"></div>
         <div class="earth">
-            <div class="earth::before"></div>
             <div class="moon"></div>
         </div>
-        <div class="venus"></div>
+        
         <div class="mars"></div>
+        <div class="venus"></div>
         <div class="jupiter"></div>
         <div class="saturno">
             <div class="ring"></div>
         </div>
+        <div class="urano"></div>
 
-        <div id="ventana-emergente-sol" class="oculto">
+        <!--Ventanas Emergentes-->
+
+        <div id="ventana-emergente-sol" class="ventana-emergente oculto">
             <h3>Descripción del Sol:</h3>
             <img src="/imagenes/580b585b2edbce24c47b270f.png" alt="sun">
             <p>El Sol es la estrella más próxima a la Tierra y se encuentra a una distancia promedio de 150 millones de kilómetros. Es la principal fuente primaria de luz y calor para la Tierra.</p>
+            <div class="centrar">
             <button id="cerrar-ventana-sol">Cerrar</button>
+            </div>
         </div>
 
-        <div id="ventana-emergente-venus" class="oculto">
+        <div id="ventana-emergente-venus" class="ventana-emergente oculto">
             <h3>Descripción de Venus:</h3>
             <img src="/imagenes/venus.png" alt="venus">
             <p>Venus es el segundo planeta del sistema solar en orden de proximidad al Sol y el tercero más pequeño después de Mercurio y Marte. Al igual que Mercurio, carece de satélites naturales. Recibe su nombre en honor a Venus, la diosa romana del amor. es conocido por su atmósfera densa y su superficie volcánica.</p>
+            <div class="centrar">
             <button id="cerrar-ventana-venus">Cerrar</button>
+            </div>
         </div>
         
-        <div id="ventana-emergente-tierra" class="oculto">
+        <div id="ventana-emergente-tierra" class="ventana-emergente oculto">
             <h3>Descripción del planeta Tierra:</h3>
             <img src="/imagenes/tierra.png" alt="tierra">
             <p>La Tierra tiene una masa de aproximadamente mil trillones de toneladas. Tiene un radio de alrededor de 6370 km. Cuenta con un satélite, la Luna, que gira en torno a ella. Es un geoide, es decir, la forma de la Tierra es concretamente una esfera aplanada en los polos norte y sur.</p>
+            <div class="centrar">
             <button id="cerrar-ventana-tierra">Cerrar</button>
+            </div>
         </div>
         
         
-    </div>
+        <div id="ventana-emergente-marte" class="ventana-emergente oculto">
+            <h3>Descripción del planeta Marte:</h3>
+            <img src="/imagenes/marte.png" alt="marte">
+            <p>Marte es uno de los planetas rocosos del Sistema Solar junto a Mercurio, Venus y la Tierra. Conocido también como el “planeta rojo”, tiene una composición y estructura bastante parecida a la Tierra. De hecho, posee valles, desiertos y dos casquetes polares.</p>
+            <div class="centrar">
+            <button id="cerrar-ventana-marte">Cerrar</button>
+            </div>
+        </div>
+
+        <div id="ventana-emergente-jupiter" class="ventana-emergente oculto">
+            <h3>Descripción del planeta Jupiter:</h3>
+            <img src="/imagenes/JUPITER.PNG" alt="Jupiter">
+            <p>Júpiter es un gigante hecho de gas, y no tiene una superficie sólida, pero puede tener un núcleo interno sólido de aproximadamente el tamaño de la Tierra. Júpiter también tiene anillos, pero son demasiado tenues para verlos muy bien.</p>
+            <div class="centrar">
+            <button id="cerrar-ventana-jupiter">Cerrar</button>
+            </div>
+        </div>
+
+        <div id="ventana-emergente-saturno" class="ventana-emergente oculto">
+            <h3>Descripción del planeta Saturno:</h3>
+            <img src="/imagenes/SATURNO.PNG" alt="Saturno">
+            <p>Es un gigante de gas, como Júpiter. Está compuesto por hidrógeno y helio, sobre todo. Tiene una atmósfera densa. Cuenta con un precioso grupo de siete anillos separados por espacio entre ellos (Para este proyecto, solo se pudieron plasmar dos anillos).</p>
+            <div class="centrar">
+            <button id="cerrar-ventana-saturno">Cerrar</button>
+            </div>
+        </div>
+
+        <div id="ventana-emergente-urano" class="ventana-emergente oculto">
+            <h3>Descripción del planeta Urano:</h3>
+            <img src="/imagenes/URANO.PNG" alt="Urano">
+            <p>Urano es el séptimo planeta del sistema solar, el tercero de mayor tamaño, y el cuarto más masivo. Se llama así en honor de la divinidad griega del cielo Urano, el padre de Crono y el abuelo de Zeus.</p>
+            <div class="centrar">
+            <button id="cerrar-ventana-urano">Cerrar</button>
+            </div>
+        </div>
+        
+        <!--Estrellas (Agradecimientos)-->
+
+        <div id="ventana-emergente-sirius" class="ventana-emergente oculto">
+            <h3>Agradecimientos Especiales:</h3>
+            <img src="/imagenes/rossana.png" alt="Rossana">
+            <p>Te amo, gracias por apoyarme en los buenos y malos momentos, por darme animo a seguir con esto e impulsarme a ser mejor persona. Te dedico a la estrella Sirius, por ser una de las mas Brillantes descubiertas hasta el momento.</p>
+            <div class="centrar">
+            <button id="cerrar-ventana-sirius">Cerrar</button>
+            </div>
+        </div>
+        
+        <div id="ventana-emergente-betelgeuse" class="ventana-emergente oculto">
+            <h3>Agradecimientos Especiales:</h3>
+            <img src="/imagenes/mama.png" alt="madre">
+            <p>Espero impacientemente por nuestro reencuentro, te extraño una barbaridad, gracias por criarme con tanto amor, he plasmado a betelgeuse en honor a ti. La vida no me va a alcanzar para agradecerte todo Madre mia.</p>
+            <div class="centrar">
+            <button id="cerrar-ventana-betelgeuse">Cerrar</button>
+            </div>
+        </div>
+
+        <div id="ventana-emergente-aldebaran" class="ventana-emergente oculto">
+            <h3>Agradecimientos Especiales:</h3>
+            <img src="/imagenes/erwin.png" alt="hermano">
+            <p>Gracias por todo el apoyo que me has dado a lo largo de la vida, siempre estare orgulloso de ser tu hermano. Aldebaran va dedicado a ti.</p>
+            <div class="centrar">
+            <button id="cerrar-ventana-aldebaran">Cerrar</button>
+            </div>
+        </div>
+
+        <div id="ventana-emergente-rigel" class="ventana-emergente oculto">
+            <h3>Agradecimientos Especiales:</h3>
+            <img src="/imagenes/papa.png" alt="Papa">
+            <p>Espero impacientemente por nuestro reencuentro, gracias por todas las enseñanzas, con ellas he logrado soportar la soledad de tenerte lejos. Todo esto va a pasar.  Te amo, Papa. </p>
+            <div class="centrar">
+            <button id="cerrar-ventana-rigel">Cerrar</button>
+            </div>
+        </div>
     
 </body>
 </html>
