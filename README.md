@@ -16,5 +16,16 @@ Se agrego el planeta Saturno 🪐 al sistema solar con su respectivo anillo, no 
 
 En otra actualizacion del mismo dia, he podido incluir una ventana emergente al presionar en click en el Sol :sunny:, La Tierra :earth_americas: y Venus.
 
+### :calendar: 04/05/2023
+
+Hubo inconvenientes este dia debido a que hubo un error en el ordenar los div del HTML ya que no me permitia interactuar con Marte y los planetas que le seguia (Jupiter, Saturno, etc) por ello solo se procedio a factorizar un poco el codigo y pensar en una manera de solventar el problema.
+
+### :calendar: 05/05/2023
+
+Se agrego Urano, musica de fondo y ventanas emergente, pude solventar el problema de Marte para poder interactuar con el y los planetas venideros.
+
+### :calendar: 06/05/2023
+
+Se agrego una animacion a las ventanas emergentes y les di un poco mas de estilos, le aguegue una fuente de google fonts. En el deploy del proyecto en algunos ordenadores se escucha la musica y en otros no. Desconozco aun el motivo. Doy por finalizado el proyecto. Fue entretenido hacer esto he aprendido mucho.
 
 Deploy de mi proyecto actualizado: https://frolicking-dusk-9fb1ba.netlify.app/ 
